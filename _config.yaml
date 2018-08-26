@@ -3,6 +3,6 @@ author: Evgeny Ternovsky
 email: eternovsky+kqlblog@gmail.com
 description: A weekly(ish) discussion of solving interesting problems with KQL
 github_username:  eternovsky
-paginate:5
+paginate: 5
 markdown: kramdown
 theme: minima-reboot
