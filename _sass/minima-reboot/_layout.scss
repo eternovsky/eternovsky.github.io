@@ -10,6 +10,7 @@ body {
 #nav-header {
   border-top: 5px solid !important;
   border-bottom: 1px solid $layout-color-border !important;
+  padding-bottom: 5px !important;
 }
 
 #nav-container {
@@ -61,6 +62,10 @@ body {
 
 #site-footer {
   border-top: 1px solid $layout-color-border;
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  width: 100%;
 }
 
 .highlight pre {
