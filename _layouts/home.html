@@ -2,10 +2,11 @@
 layout: default
 ---
 
+<!--
 <header class="pt-3 mb-3">
   {{ content }}
 </header>
-
+-->
 <div id="content">
 
   {% if site.paginate %}
@@ -31,6 +32,11 @@ layout: default
     {% endfor %}
   </ul>
 
+  <div class="pageBlock">
+  {% if site.plugins contains "jekyll-feed" %}
+  <a href="{{ "/feed.xml" | relative_url }}"><div id="rss-icon" class="mb-2"></div></a>
+  {% endif %}
+
   {% if site.paginate %}
   <nav class="py-1" aria-label="Blog page navigation">
     {% if paginator.previous_page %}
@@ -44,9 +50,6 @@ layout: default
     {% endif %}
   </nav>
   {% endif %}
-
-  {% if site.plugins contains "jekyll-feed" %}
-    <a href="{{ "/feed.xml" | relative_url }}"><div id="rss-icon" class="mb-2"></div></a>
-  {% endif %}
+</div>
 
 </div>

@@ -2,9 +2,15 @@ $layout-color-border: #e9ecef !default;
 $layout-color-background: #fdfdfd !default;
 $layout-color-syntax-highlighting-background: #f8f9fa !default;
 $layout-responsive-nav-cutoff: 768px !default;
+$layout-color-background-accent: #f0f2f5 !default;
+
+html {
+  height: 100%;
+}
 
 body {
   background-color: $layout-color-background;
+  height: 100%;
 }
 
 #nav-header {
@@ -40,15 +46,31 @@ body {
 }
 
 #content {
+  margin-bottom: 40px;
   h1, h2, h3, h4 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: left;
   }
+  table {
+    font-style: normal;
+    font-size: 0.7rem;
+    thead{
+      background-color: $layout-color-background-accent;
+      font-weight: 600;
+    }
+    & th, td{
+      padding-right: 2em;
+      border-top: 1px solid $layout-color-border;
+      border-bottom: 1px solid $layout-color-border;
+      padding-top: 5px;
+      padding-bottom: 2px;
+    }
+  }
   blockquote {
     border-left: 4px solid $layout-color-border;
     padding-left: 1rem;
-    font-style: italic
+    font-style: italic;
   }
   .footnotes {
     text-align: left;
@@ -62,10 +84,11 @@ body {
 
 #site-footer {
   border-top: 1px solid $layout-color-border;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 40px;
   width: 100%;
+  background-color: #fff;
 }
 
 .highlight pre {
@@ -75,4 +98,14 @@ body {
   padding: 0.75rem;
   margin-bottom: 1rem;
   white-space: pre-wrap;
+  font-size: 0.7rem;
+}
+
+.pageBlock {
+   a,a>div,nav{
+    display: inline-block;
+  };
+  a{
+    vertical-align: middle;
+  }
 }
